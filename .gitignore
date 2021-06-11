@@ -5,7 +5,6 @@ bin/oslobanden.exe
 oslobanden-server/config.toml
 
 oslobanden-wasm/Cargo.lock
-oslobanden-wasm/bin/
-oslobanden-wasm/pkg/
+
 **/*.rs.bk
 wasm-pack.log
