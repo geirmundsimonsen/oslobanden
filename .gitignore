@@ -1,5 +1,6 @@
 target/
-bin/
+bin/config.toml
+bin/oslobanden.exe
 
 oslobanden-server/config.toml
 
