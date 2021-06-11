@@ -1,7 +1,8 @@
 cargo build --release
-cd oslobanden-wasm
-wasm-pack build --target web --out-name frontend
-cd ..
+### Use prebuilt wasm binary
+# cd oslobanden-wasm
+# wasm-pack build --target web --out-name frontend
+# cd ..
 systemctl stop oslobanden
 cp target/release/oslobanden bin/oslobanden
 systemctl start oslobanden
