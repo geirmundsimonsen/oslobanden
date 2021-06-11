@@ -1,7 +1,8 @@
 use wasm_bindgen::prelude::*;
 use crate::utils::get_body;
 use crate::dom::Tag::{Div, H1};
-use crate::dom::{FontFamily, FontSize, Margin, MinWidth, TextAlign};
+use crate::dom::{Background, Color, FontFamily, FontSize, Margin, MinWidth, TextAlign};
+use crate::dom::set_body_style;
 
 const MIN_WIDTH_PX: u32 = 800;
 
@@ -12,8 +13,10 @@ pub async fn mainpage() -> Result<(), JsValue> {
             .style(FontFamily::Val("Luckiest Guy".to_string(), "cursive".to_string()))
             .style(FontSize::Str(variable_size_simple(96)))
             .style(TextAlign::Center)
+            .style(Color::Str("#fff3b5".to_string()))
             .content("Oslobandens<br/>~ bejublede ~<br/>bingojukeboks"));
 
+    set_body_style(vec![Box::new(Background::Str("#b35008".to_string()))]);
     page.realize(&get_body());
 
     Ok(())

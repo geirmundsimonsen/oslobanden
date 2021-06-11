@@ -1,5 +1,5 @@
 use web_sys::{Element};
-use crate::utils::{html_elem, append};
+use crate::utils::{html_elem, append, get_body};
 
 #[allow(dead_code)]
 pub enum Tag {
@@ -77,6 +77,13 @@ impl Node {
 
         self.child_nodes.iter().for_each(|node| node.realize(&element));
     }
+}
+
+pub fn set_body_style(styles: Vec<Box<dyn Style>>) {
+    styles.iter().for_each(|style| {
+        let (prop, value) = style.to_css_string();
+        get_body().style().set_property(&prop, &value).unwrap();
+    })
 }
 
 pub trait Style {
@@ -245,6 +252,32 @@ impl Style for MinWidth {
     fn to_css_string(&self) -> (String, String) {
         match self {
             MinWidth::Px(px) => ("min-width".to_string(), format!("{}px", px))
+        }
+    }
+}
+
+#[allow(dead_code)]
+pub enum Background {
+    Str(String)
+}
+
+impl Style for Background {
+    fn to_css_string(&self) -> (String, String) {
+        match self {
+            Background::Str(s) => ("background".to_string(), s.to_string())
+        }
+    }
+}
+
+#[allow(dead_code)]
+pub enum Color {
+    Str(String)
+}
+
+impl Style for Color {
+    fn to_css_string(&self) -> (String, String) {
+        match self {
+            Color::Str(s) => ("color".to_string(), s.to_string())
         }
     }
 }
