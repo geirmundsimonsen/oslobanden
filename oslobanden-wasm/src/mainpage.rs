@@ -1,10 +1,11 @@
 use wasm_bindgen::prelude::*;
-use crate::utils::get_body;
-use crate::dom::Tag::{Div, H1};
-use crate::dom::{Background, Color, FontFamily, FontSize, Margin, MinWidth, TextAlign};
-use crate::dom::set_body_style;
+use weblib::utils::get_body;
+use weblib::dom::Tag::{Div, H1};
+use weblib::dom::{Background, Color, FontFamily, FontSize, MinWidth, TextAlign};
+use weblib::dom::set_body_style;
 
 const MIN_WIDTH_PX: u32 = 800;
+// http://detectmobilebrowsers.com/ for a script that test for mobile devices - in case
 
 pub async fn mainpage() -> Result<(), JsValue> {
     let page = Div.node().style(MinWidth::Px(MIN_WIDTH_PX))

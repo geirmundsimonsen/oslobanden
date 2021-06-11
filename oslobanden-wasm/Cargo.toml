@@ -14,32 +14,11 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-wasm-bindgen = { version = "0.2.74", features = ["serde-serialize"] }
+wasm-bindgen = { version = "0.2.74" }
 wasm-bindgen-futures = "0.4.24"
-js-sys = "0.3.51"
-serde = { version = "1.0", features = ["derive"] }
 console_error_panic_hook = { version = "0.1.6", optional = true }
-wee_alloc = { version = "0.4.5", optional = true }
 oslobanden-wasm-com = { path = "../oslobanden-wasm-com" }
-
-[dependencies.web-sys]
-version = "0.3.51"
-features = [
-  'CssStyleDeclaration',
-  'Document',
-  'Element',
-  'Headers',
-  'HtmlElement',
-  'Node',
-  'Request',
-  'RequestInit',
-  'RequestMode',
-  'Response',
-  'Window',
-]
-
-[dev-dependencies]
-wasm-bindgen-test = "0.3.13"
+weblib = { git = "https://github.com/geirmundsimonsen/weblib", rev = "fdbf3723a0135a70d81210f7422ccc533658c402" }
 
 [profile.release]
 lto = true
