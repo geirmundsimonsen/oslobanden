@@ -6,7 +6,7 @@ use crate::dom::{FontFamily, FontSize, Margin, MinWidth, TextAlign};
 const MIN_WIDTH_PX: u32 = 800;
 
 pub async fn mainpage() -> Result<(), JsValue> {
-    let page = Div.node().style(Margin::Px(32)).style(MinWidth::Px(MIN_WIDTH_PX))
+    let page = Div.node().style(MinWidth::Px(MIN_WIDTH_PX))
         .child(
             H1.node()
             .style(FontFamily::Val("Luckiest Guy".to_string(), "cursive".to_string()))
