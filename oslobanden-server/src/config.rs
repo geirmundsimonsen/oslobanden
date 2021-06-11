@@ -4,7 +4,7 @@ use std::fs;
 
 #[derive(Clone, Deserialize)]
 pub struct Config {
-    // important config here
+    pub server_port: u16,
 }
 
 pub fn get_config() -> Config {

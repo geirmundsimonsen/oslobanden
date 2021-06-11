@@ -8,10 +8,10 @@ use crate::config::Config;
 use crate::server::handler::handle;
 
 pub fn run_server(config: Config) -> tokio::task::JoinHandle<()> {
-    tokio::spawn(async {
-        let make_service = make_service_fn(move |_conn: &AddrStream| {
-            let config = config.clone();
+    let server_port = config.server_port;
 
+    tokio::spawn(async move {        
+        let make_service = make_service_fn(move |_conn: &AddrStream| {
             let service = service_fn(move |req| {
                 handle(req)
             });
@@ -20,7 +20,7 @@ pub fn run_server(config: Config) -> tokio::task::JoinHandle<()> {
         });
 
         let server = Server::bind(
-            &SocketAddr::from(([127, 0, 0, 1], 3000))
+            &SocketAddr::from(([127, 0, 0, 1], server_port))
         ).serve(make_service);
 
         if let Err(e) = server.await {
