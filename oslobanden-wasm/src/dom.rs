@@ -85,13 +85,15 @@ pub trait Style {
 
 #[allow(dead_code)]
 pub enum FontSize {
-    Px(u32)
+    Px(u32),
+    Str(String)
 }
 
 impl Style for FontSize {
     fn to_css_string(&self) -> (String, String) {
         match self {
-            FontSize::Px(px) => ("font-size".to_string(), format!("{}px", px))
+            FontSize::Px(px) => ("font-size".to_string(), format!("{}px", px)),
+            FontSize::Str(s) => ("font-size".to_string(), s.to_string()),
         }
     }
 }
@@ -193,6 +195,7 @@ impl Style for MarginBottom {
 
 #[allow(dead_code)]
 pub enum TextAlign {
+    Center,
     Left,
     Right
 }
@@ -200,6 +203,7 @@ pub enum TextAlign {
 impl Style for TextAlign {
     fn to_css_string(&self) -> (String, String) {
         match self {
+            TextAlign::Center => ("text-align".to_string(), "center".to_string()),
             TextAlign::Left => ("text-align".to_string(), "left".to_string()),
             TextAlign::Right => ("text-align".to_string(), "right".to_string())
         }
@@ -215,6 +219,32 @@ impl Style for PaddingRight {
     fn to_css_string(&self) -> (String, String) {
         match self {
             PaddingRight::Px(px) => ("padding-right".to_string(), format!("{}px", px))
+        }
+    }
+}
+
+#[allow(dead_code)]
+pub enum FontFamily {
+    Val(String, String)
+}
+
+impl Style for FontFamily {
+    fn to_css_string(&self) -> (String, String) {
+        match self {
+            FontFamily::Val(name, attr) => ("font-family".to_string(), format!("'{}', {}", name, attr))
+        }
+    }
+}
+
+#[allow(dead_code)]
+pub enum MinWidth {
+    Px(u32)
+}
+
+impl Style for MinWidth {
+    fn to_css_string(&self) -> (String, String) {
+        match self {
+            MinWidth::Px(px) => ("min-width".to_string(), format!("{}px", px))
         }
     }
 }
