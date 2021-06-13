@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background: #b35008;
+	color: #4d4d4d;
+	min-width: 800px;
+	max-width: 1280px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
+}
+
+@keyframes header-wiggle {
+	0% { color: rgb(209, 255, 59); }
+	9% { color: rgb(209, 255, 59); }
+	10% { color: rgb(255, 226, 59); }
+	19% { color: rgb(255, 226, 59); }
+	20% { color: rgb(59, 226, 255); }
+	29% { color: rgb(59, 226, 255); }
+	30% { color: rgb(209, 59, 255); }
+	39% { color: rgb(209, 59, 255); }
+	40% { color: rgb(59, 255, 141); }
+	49% { color: rgb(59, 255, 141); }
+	50% { color: rgb(255, 177, 59); }
+	59% { color: rgb(255, 177, 59); }
+	60% { color: rgb(59, 199, 255); }
+	69% { color: rgb(59, 199, 255); }
+	70% { color: rgb(98, 255, 59); }
+	79% { color: rgb(98, 255, 59); }
+	80% { color: rgb(255, 137, 59); }
+	89% { color: rgb(255, 137, 59); }
+	90% { color: rgb(248, 59, 255); }
+	99% { color: rgb(248, 59, 255); }
+	100% { color: rgb(255, 226, 59); }
+}
+
+.header:hover {
+	animation: header-wiggle 1.4s linear infinite;
+}
