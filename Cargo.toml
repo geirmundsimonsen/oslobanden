@@ -1,4 +1,0 @@
-[workspace]
-
-members = ["oslobanden-server", "oslobanden-wasm-com"]
-exclude = ["oslobanden-wasm"]

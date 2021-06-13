@@ -1,9 +1,0 @@
-target/
-bin/
-
-oslobanden-server/config.toml
-
-oslobanden-wasm/Cargo.lock
-
-**/*.rs.bk
-wasm-pack.log
