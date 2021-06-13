@@ -44,13 +44,73 @@ fn view(model: &Model) -> Node<Msg> {
             br![],
             "bingojukeboks",
             style!{St::FontFamily => "Luckiest Guy, cursive"},
-            style!{St::FontSize => variable_size_simple(96)},
-            style!{St::LineHeight => px(120)},
+            style!{St::FontSize => variable_size_simple(40)},
+            style!{St::LineHeight => variable_size_simple(40)},
             style!{St::TextAlign => "center"},
             style!{St::Color => "#fff3b5"},
-            style!{St::MarginTop => px(96)},
-        ]
+            style!{St::MarginTop => variable_size_simple(20)},
+        ],
+        p![
+            "Medvirkende:",
+            style!{St::MarginTop => variable_size_simple(60)},
+            style!{St::FontFamily => "Londrina Solid, cursive"},
+            style!{St::FontSize => variable_size_simple(30)},
+            style!{St::TextAlign => "center"},
+            style!{St::Color => "#fff3b5"},
+        ],
+        p![
+            "Jonathan",
+            style!{St::FontFamily => "Londrina Solid, cursive"},
+            style!{St::FontSize => variable_size_simple(30)},
+            style!{St::TextAlign => "center"},
+            style!{St::Color => "#fff3b5"},
+        ],
+        p![
+            "Jacob",
+            style!{St::FontFamily => "Londrina Solid, cursive"},
+            style!{St::FontSize => variable_size_simple(30)},
+            style!{St::TextAlign => "center"},
+            style!{St::Color => "#fff3b5"},
+        ],
+        p![
+            "Hugo",
+            style!{St::FontFamily => "Londrina Solid, cursive"},
+            style!{St::FontSize => variable_size_simple(30)},
+            style!{St::TextAlign => "center"},
+            style!{St::Color => "#fff3b5"},
+        ],
+        p![
+            "Hauk",
+            style!{St::FontFamily => "Londrina Solid, cursive"},
+            style!{St::FontSize => variable_size_simple(30)},
+            style!{St::TextAlign => "center"},
+            style!{St::Color => "#fff3b5"},
+        ],
+        p![
+            "Geirmund",
+            style!{St::FontFamily => "Londrina Solid, cursive"},
+            style!{St::FontSize => variable_size_simple(30)},
+            style!{St::TextAlign => "center"},
+            style!{St::Color => "#fff3b5"},
+        ],
+        p![
+            "Kontakt:",
+            style!{St::MarginTop => variable_size_simple(60)},
+            style!{St::FontFamily => "Londrina Solid, cursive"},
+            style!{St::FontSize => variable_size_simple(30)},
+            style!{St::TextAlign => "center"},
+            style!{St::Color => "#fff3b5"},
+        ],
+        p![
+            "kontakt@oslobanden.no",
+            style!{St::FontFamily => "Londrina Solid, cursive"},
+            style!{St::FontSize => variable_size_simple(30)},
+            style!{St::TextAlign => "center"},
+            style!{St::Color => "#fff3b5"},
+        ],
     ]
+
+
 
     /*div![
         "This is a counter: ",
@@ -81,10 +141,10 @@ fn variable_size_rem(sz_min: f32, sz_max: f32, w_min: f32, w_max: f32) -> String
     format!("clamp({sz_min}rem, calc({sz_min}rem + ({sz_max} - {sz_min}) * ((100vw - {w_min}rem) / ({w_max} - {w_min}))), {sz_max}rem)", sz_min = sz_min, sz_max = sz_max, w_min = w_min, w_max = w_max)
 }
 
-const MIN_WIDTH_PX: u32 = 800;
+const MIN_WIDTH_PX: u32 = 360;
 
 fn variable_size_simple(min_size_px: u32) -> String {
-    let scale_factor = 1.5;
+    let scale_factor = 3.0;
     let min_size_rem = min_size_px as f32 / 16.0;
     let min_width = MIN_WIDTH_PX as f32 / 16.0;
     let max_width = min_width * scale_factor; 
