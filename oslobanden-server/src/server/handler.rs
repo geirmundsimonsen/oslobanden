@@ -10,6 +10,10 @@ pub async fn handle(
         return Ok(response)
     }
 
+    if req.uri().path().starts_with("/img") {
+        return Ok(img_handler(&req))
+    }
+
     match (req.method(), req.uri().path()) {
         (&Method::GET, "/test") => {
             Ok(Response::new(Body::from("OK")))
@@ -49,7 +53,7 @@ fn main_entry_handler(req: &Request<Body>) -> Option<Response<Body>> {
             let path = std::env::current_dir().unwrap();
             println!("The current directory is {}", path.display());
             let html = read_to_string(index_path).expect("Error reading html file");
-            Some(Response::new(Body::from(html))) 
+            Some(Response::new(Body::from(html)))
         },
         (&Method::GET, "/index.css") => {
             let path = std::env::current_dir().unwrap();
@@ -67,4 +71,15 @@ fn main_entry_handler(req: &Request<Body>) -> Option<Response<Body>> {
         },
         _ => None
     }
+}
+
+fn img_handler(req: &Request<Body>) -> Response<Body> {
+    let img_path = if OS == "linux" {
+        ""
+    } else {
+        "../oslobanden-site"
+    };
+
+    let jpg = read(img_path.to_owned() + req.uri().path()).expect("Error reading jpg file");
+    Response::builder().header("Content-Type", "image/jpg").body(Body::from(jpg)).unwrap()
 }
