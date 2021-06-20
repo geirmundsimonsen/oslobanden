@@ -81,5 +81,5 @@ fn img_handler(req: &Request<Body>) -> Response<Body> {
     };
 
     let jpg = read(img_path.to_owned() + req.uri().path()).expect("Error reading jpg file");
-    Response::builder().header("Content-Type", "image/jpg").body(Body::fr1om(jpg)).unwrap()
+    Response::builder().header("Content-Type", "image/jpg").body(Body::from(jpg)).unwrap()
 }
