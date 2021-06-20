@@ -75,13 +75,11 @@ fn main_entry_handler(req: &Request<Body>) -> Option<Response<Body>> {
 
 fn img_handler(req: &Request<Body>) -> Response<Body> {
     let img_path = if OS == "linux" {
-        ""
+        "./"
     } else {
         "../oslobanden-site"
     };
 
-    println!("{}", img_path.to_owned() + req.uri().path());
-
     let jpg = read(img_path.to_owned() + req.uri().path()).expect("Error reading jpg file");
-    Response::builder().header("Content-Type", "image/jpg").body(Body::from(jpg)).unwrap()
+    Response::builder().header("Content-Type", "image/jpg").body(Body::fr1om(jpg)).unwrap()
 }
