@@ -36,6 +36,70 @@ fn update(msg: Msg, model: &mut Model, orders: &mut impl Orders<Msg>) {
 
 fn view(model: &Model) -> Node<Msg> {
     div![
+        C!["main-container"],
+        style!{St::MarginBottom => variable_size_simple(20)},
+        style!{St::PaddingBottom => variable_size_simple(20)},
+
+        div![
+            C!["main-image-gradient"],
+            img![
+                C!["main-image"],
+                attrs!{At::Src => "img/oslobanden-main.jpg"},
+            ],
+        ],
+        div![
+            C!["header"],
+            "OSLOBANDEN",
+            style!{St::FontSize => variable_size_simple(48)},
+            style!{St::LineHeight => variable_size_simple(40)},
+            style!{St::MarginTop => variable_size_simple(0)},
+        ],
+        div![
+            C!["secondary-header"],
+            "OG DENS BEJUBLEDE BINGOJUKEBOKS",
+            style!{St::FontSize => variable_size_simple(48)},
+            style!{St::LineHeight => variable_size_simple(40)},
+            style!{St::MarginTop => variable_size_simple(0)},
+        ],
+        div![
+            C!["paragraph-text"],
+            "Slippes løs på Oslos gater fra 6. til 11. juli. Nøyaktig tid og sted følger. Tillatelser innhentes.",
+            style!{St::FontSize => variable_size_simple(14)},
+            style!{St::MarginTop => variable_size_simple(40)},
+        ],
+        div![
+            C!["paragraph-text"],
+            "Oslobanden er et knippe spille-avhengige musikere som på ingen måte trenger å ty til gatene for å tjene til livets opphold - nei, det hersker et genuint ønske om å overøse et forbipasserende publikum med musikalsk glede.",
+            style!{St::FontSize => variable_size_simple(14)},
+            style!{St::MarginTop => variable_size_simple(40)},
+        ],
+        div![
+            C!["paragraph-text"],
+            "Og kanskje tjene en slant på veien, selv om det overhodet ikke trengs.",
+            style!{St::FontSize => variable_size_simple(8)},
+            style!{St::MarginTop => variable_size_simple(40)},
+        ],
+        div![
+            C!["paragraph-text"],
+            "Oslobanden består av nettopp de du ser ovenfor, og spiller låter fra alle epoker, med relativt uanstrengt bravur, på alle tenkelige instrumenter, og i absolutt all slags vær. Oslobanden har også utviklet et unikt, patentert system der publikum selv kan bestemme hva slags låter som spilles.",
+            style!{St::FontSize => variable_size_simple(14)},
+            style!{St::MarginTop => variable_size_simple(40)},
+        ],
+        div![
+            C!["paragraph-text"],
+            "Kontakt oss på kontakt@oslobanden.no. Vi biter ikke.",
+            style!{St::FontSize => variable_size_simple(14)},
+            style!{St::MarginTop => variable_size_simple(40)},
+        ],
+        div![
+            C!["paragraph-text"],
+            "Webdesigner søkes.",
+            style!{St::FontSize => variable_size_simple(8)},
+            style!{St::MarginTop => variable_size_simple(40)},
+        ],
+    ]
+
+    /*div![
         h1![
             C!["header"],
             "Oslobandens",
@@ -108,9 +172,7 @@ fn view(model: &Model) -> Node<Msg> {
             style!{St::TextAlign => "center"},
             style!{St::Color => "#fff3b5"},
         ],
-    ]
-
-
+    ]*/
 
     /*div![
         "This is a counter: ",
