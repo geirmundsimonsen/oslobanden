@@ -75,7 +75,7 @@ fn main_entry_handler(req: &Request<Body>) -> Option<Response<Body>> {
 
 fn img_handler(req: &Request<Body>) -> Response<Body> {
     let img_path = if OS == "linux" {
-        "./"
+        "."
     } else {
         "../oslobanden-site"
     };
