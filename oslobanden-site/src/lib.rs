@@ -45,6 +45,7 @@ fn view(model: &Model) -> Node<Msg> {
             img![
                 C!["main-image"],
                 attrs!{At::Src => "img/oslobanden-main.jpg"},
+                attrs!{At::Alt => "Fotografi: Lil Tempo Gigante"}
             ],
         ],
         div![
@@ -87,13 +88,13 @@ fn view(model: &Model) -> Node<Msg> {
         ],
         div![
             C!["paragraph-text"],
-            "Kontakt oss på kontakt@oslobanden.no. Vi biter ikke.",
+            "Kontakt oss: kontakt@oslobanden.no.",
             style!{St::FontSize => variable_size_simple(14)},
             style!{St::MarginTop => variable_size_simple(40)},
         ],
         div![
             C!["paragraph-text"],
-            "Webdesigner søkes.",
+            "Fotograf: Lil' Tempo Gigante",
             style!{St::FontSize => variable_size_simple(8)},
             style!{St::MarginTop => variable_size_simple(40)},
         ],
