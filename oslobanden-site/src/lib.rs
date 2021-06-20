@@ -76,12 +76,6 @@ fn view(model: &Model) -> Node<Msg> {
         ],
         div![
             C!["paragraph-text"],
-            "Og kanskje tjene en slant på veien, selv om det overhodet ikke trengs.",
-            style!{St::FontSize => variable_size_simple(8)},
-            style!{St::MarginTop => variable_size_simple(40)},
-        ],
-        div![
-            C!["paragraph-text"],
             "Oslobanden består av nettopp de du ser ovenfor, og spiller låter fra alle epoker, med relativt uanstrengt bravur, på alle tenkelige instrumenter, og i absolutt all slags vær. Oslobanden har også utviklet et unikt, patentert system der publikum selv kan bestemme hva slags låter som spilles.",
             style!{St::FontSize => variable_size_simple(14)},
             style!{St::MarginTop => variable_size_simple(40)},
