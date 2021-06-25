@@ -88,7 +88,7 @@ fn view(model: &Model) -> Node<Msg> {
         ],
         div![
             C!["paragraph-text"],
-            "Fotograf: Lil' Tempo Gigante",
+            "Fotograf: Kristian Leraand",
             style!{St::FontSize => variable_size_simple(8)},
             style!{St::MarginTop => variable_size_simple(40)},
         ],
