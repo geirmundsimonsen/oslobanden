@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        ".vscode": true,
+        "bin": true,
+        "oslobanden-site/pkg": true,
+        "oslobanden-site/target": true
+    }
+}
