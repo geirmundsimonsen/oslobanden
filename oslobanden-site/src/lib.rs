@@ -2,39 +2,15 @@
 
 use seed::{prelude::*, *};
 
-fn init(_: Url, _: &mut impl Orders<Msg>) -> Model {
-    Model { /*counter: 0, test_response: "".to_string()*/ }
-}
+fn init(_: Url, _: &mut impl Orders<Msg>) -> Model { Model {} }
 
-// keeping model, msg, update - for reference.. keep building oslobanden.no
-struct Model {
-    //counter: i32,
-    //test_response: String,
-}
+struct Model {}
 
-enum Msg {
-    //Increment,
-    //TestRequest,
-    //TestResponse(String)
-}
+enum Msg {}
 
-fn update(msg: Msg, _model: &mut Model, _orders: &mut impl Orders<Msg>) {
-    match msg {
-        /*Msg::Increment => model.counter += 4,
-        Msg::TestRequest => {
-            orders.skip().perform_cmd(async {
-                let response = fetch("test").await.expect("HTTP request failed");
-                let response = response.check_status().expect("status failed").text().await.expect("deserialization failed");
-                Msg::TestResponse(response)
-            });
-        },
-        Msg::TestResponse(response) => {
-            model.test_response = response;
-        }*/
-    }
-}
+fn update(_: Msg, _: &mut Model, _: &mut impl Orders<Msg>) {}
 
-fn view(_model: &Model) -> Node<Msg> {
+fn view(_: &Model) -> Node<Msg> {
     div![
         C!["main-container"],
         div![
@@ -145,100 +121,6 @@ fn view(_model: &Model) -> Node<Msg> {
             "Fotograf: Kristian Leraand",
         ],
     ]
-
-    /*div![
-        h1![
-            C!["header"],
-            "Oslobandens",
-            br![],
-            "~ bejublede ~",
-            br![],
-            "bingojukeboks",
-            style!{St::FontFamily => "Luckiest Guy, cursive"},
-            style!{St::FontSize => variable_size_simple(40)},
-            style!{St::LineHeight => variable_size_simple(40)},
-            style!{St::TextAlign => "center"},
-            style!{St::Color => "#fff3b5"},
-            style!{St::MarginTop => variable_size_simple(20)},
-        ],
-        p![
-            "Medvirkende:",
-            style!{St::MarginTop => variable_size_simple(60)},
-            style!{St::FontFamily => "Londrina Solid, cursive"},
-            style!{St::FontSize => variable_size_simple(30)},
-            style!{St::TextAlign => "center"},
-            style!{St::Color => "#fff3b5"},
-        ],
-        p![
-            "Jonathan",
-            style!{St::FontFamily => "Londrina Solid, cursive"},
-            style!{St::FontSize => variable_size_simple(30)},
-            style!{St::TextAlign => "center"},
-            style!{St::Color => "#fff3b5"},
-        ],
-        p![
-            "Jacob",
-            style!{St::FontFamily => "Londrina Solid, cursive"},
-            style!{St::FontSize => variable_size_simple(30)},
-            style!{St::TextAlign => "center"},
-            style!{St::Color => "#fff3b5"},
-        ],
-        p![
-            "Hugo",
-            style!{St::FontFamily => "Londrina Solid, cursive"},
-            style!{St::FontSize => variable_size_simple(30)},
-            style!{St::TextAlign => "center"},
-            style!{St::Color => "#fff3b5"},
-        ],
-        p![
-            "Hauk",
-            style!{St::FontFamily => "Londrina Solid, cursive"},
-            style!{St::FontSize => variable_size_simple(30)},
-            style!{St::TextAlign => "center"},
-            style!{St::Color => "#fff3b5"},
-        ],
-        p![
-            "Geirmund",
-            style!{St::FontFamily => "Londrina Solid, cursive"},
-            style!{St::FontSize => variable_size_simple(30)},
-            style!{St::TextAlign => "center"},
-            style!{St::Color => "#fff3b5"},
-        ],
-        p![
-            "Kontakt:",
-            style!{St::MarginTop => variable_size_simple(60)},
-            style!{St::FontFamily => "Londrina Solid, cursive"},
-            style!{St::FontSize => variable_size_simple(30)},
-            style!{St::TextAlign => "center"},
-            style!{St::Color => "#fff3b5"},
-        ],
-        p![
-            "kontakt@oslobanden.no",
-            style!{St::FontFamily => "Londrina Solid, cursive"},
-            style!{St::FontSize => variable_size_simple(30)},
-            style!{St::TextAlign => "center"},
-            style!{St::Color => "#fff3b5"},
-        ],
-    ]*/
-
-    /*div![
-        "This is a counter: ",
-        C!["counter"],
-        button![
-            style!{St::Padding => px(20) + " " + &px(15)},
-            model.counter,
-            ev(Ev::Click, |_| Msg::Increment),
-        ],
-        button![
-            style!{St::Padding => px(20) + " " + &px(15)},
-            "FETCH",
-            ev(Ev::Click, |_| Msg::TestRequest),
-        ],
-        p![
-            { model.test_response.clone() }
-        ]
-    ]*/
-
 }
 
 #[wasm_bindgen(start)]
