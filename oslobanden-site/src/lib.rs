@@ -45,7 +45,7 @@ fn view(model: &Model) -> Node<Msg> {
             img![
                 C!["main-image"],
                 attrs!{At::Src => "img/oslobanden-main.jpg"},
-                attrs!{At::Alt => "Fotografi: Lil Tempo Gigante"}
+                attrs!{At::Alt => "Fotograf: Kristian Leraand"}
             ],
         ],
         div![
