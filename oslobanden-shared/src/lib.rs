@@ -1,1 +1,0 @@
-// types that is used for communication between server and client
