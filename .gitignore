@@ -1,4 +1,3 @@
 /bin
 /oslobanden-shared/target
-deploy_frontend.bat
-deploy_to_aws.bat
+*.bat
