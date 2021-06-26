@@ -37,9 +37,6 @@ fn update(msg: Msg, model: &mut Model, orders: &mut impl Orders<Msg>) {
 fn view(model: &Model) -> Node<Msg> {
     div![
         C!["main-container"],
-        style!{St::MarginBottom => variable_size_simple(20)},
-        style!{St::PaddingBottom => variable_size_simple(20)},
-
         div![
             C!["main-image-gradient"],
             img![
@@ -51,46 +48,31 @@ fn view(model: &Model) -> Node<Msg> {
         div![
             C!["header"],
             "OSLOBANDEN",
-            style!{St::FontSize => variable_size_simple(48)},
-            style!{St::LineHeight => variable_size_simple(40)},
-            style!{St::MarginTop => variable_size_simple(0)},
         ],
         div![
             C!["secondary-header"],
             "OG DENS BEJUBLEDE BINGOJUKEBOKS",
-            style!{St::FontSize => variable_size_simple(48)},
-            style!{St::LineHeight => variable_size_simple(40)},
-            style!{St::MarginTop => variable_size_simple(0)},
         ],
         div![
             C!["paragraph-text"],
             "Slippes løs på Oslos gater fra 6. til 11. juli. Nøyaktig tid og sted følger. Tillatelser innhentes.",
-            style!{St::FontSize => variable_size_simple(14)},
-            style!{St::MarginTop => variable_size_simple(40)},
         ],
         div![
             C!["paragraph-text"],
             "Oslobanden er et knippe spille-avhengige musikere som på ingen måte trenger å ty til gatene for å tjene til livets opphold - nei, det hersker et genuint ønske om å overøse et forbipasserende publikum med musikalsk glede.",
-            style!{St::FontSize => variable_size_simple(14)},
-            style!{St::MarginTop => variable_size_simple(40)},
+
         ],
         div![
             C!["paragraph-text"],
             "Oslobanden består av nettopp de du ser ovenfor, og spiller låter fra alle epoker, med relativt uanstrengt bravur, på alle tenkelige instrumenter, og i absolutt all slags vær. Oslobanden har også utviklet et unikt, patentert system der publikum selv kan bestemme hva slags låter som spilles.",
-            style!{St::FontSize => variable_size_simple(14)},
-            style!{St::MarginTop => variable_size_simple(40)},
         ],
         div![
             C!["paragraph-text"],
             "Kontakt oss: kontakt@oslobanden.no.",
-            style!{St::FontSize => variable_size_simple(14)},
-            style!{St::MarginTop => variable_size_simple(40)},
         ],
         div![
-            C!["paragraph-text"],
+            C!["paragraph-text-mini"],
             "Fotograf: Kristian Leraand",
-            style!{St::FontSize => variable_size_simple(8)},
-            style!{St::MarginTop => variable_size_simple(40)},
         ],
     ]
 
