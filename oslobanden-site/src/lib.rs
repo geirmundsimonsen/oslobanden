@@ -18,7 +18,7 @@ enum Msg {
     //TestResponse(String)
 }
 
-fn update(msg: Msg, model: &mut Model, orders: &mut impl Orders<Msg>) {
+fn update(msg: Msg, _model: &mut Model, _orders: &mut impl Orders<Msg>) {
     match msg {
         /*Msg::Increment => model.counter += 4,
         Msg::TestRequest => {
@@ -34,7 +34,7 @@ fn update(msg: Msg, model: &mut Model, orders: &mut impl Orders<Msg>) {
     }
 }
 
-fn view(model: &Model) -> Node<Msg> {
+fn view(_model: &Model) -> Node<Msg> {
     div![
         C!["main-container"],
         div![
@@ -174,18 +174,4 @@ fn view(model: &Model) -> Node<Msg> {
 #[wasm_bindgen(start)]
 pub fn start() {
     App::start("app", init, update, view);
-}
-
-fn variable_size_rem(sz_min: f32, sz_max: f32, w_min: f32, w_max: f32) -> String {
-    format!("clamp({sz_min}rem, calc({sz_min}rem + ({sz_max} - {sz_min}) * ((100vw - {w_min}rem) / ({w_max} - {w_min}))), {sz_max}rem)", sz_min = sz_min, sz_max = sz_max, w_min = w_min, w_max = w_max)
-}
-
-const MIN_WIDTH_PX: u32 = 360;
-
-fn variable_size_simple(min_size_px: u32) -> String {
-    let scale_factor = 3.0;
-    let min_size_rem = min_size_px as f32 / 16.0;
-    let min_width = MIN_WIDTH_PX as f32 / 16.0;
-    let max_width = min_width * scale_factor; 
-    variable_size_rem(min_size_rem, min_size_rem * scale_factor, min_width, max_width)
 }
