@@ -62,11 +62,35 @@ html {
 
 .paragraph-text {
 	font-size: 1.9rem;
-	
 }
 
 .paragraph-text-mini {
 	font-size: 1.2rem;
+}
+
+.musikere-header {
+	margin-top: 5.7rem;
+	font-family: 'Viaoda Libre', cursive;
+	font-size: 1.9rem;
+	text-align: center;
+}
+
+.musiker-flex {
+	display: flex;
+}
+
+.musiker {
+	width: 50%;
+	font-family: 'Viaoda Libre', cursive;
+	font-size: 1.9rem;
+	text-align: center;
+}
+
+.instrument {
+	width: 50%;
+	font-family: 'Viaoda Libre', cursive;
+	font-size: 1.9rem;
+	text-align: center;
 }
 
 @media (min-width: 800px) {

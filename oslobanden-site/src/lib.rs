@@ -64,7 +64,77 @@ fn view(_model: &Model) -> Node<Msg> {
         ],
         div![
             C!["paragraph-text"],
-            "Oslobanden består av nettopp de du ser ovenfor, og spiller låter fra alle epoker, med relativt uanstrengt bravur, på alle tenkelige instrumenter, og i absolutt all slags vær. Oslobanden har også utviklet et unikt, patentert system der publikum selv kan bestemme hva slags låter som spilles.",
+            "Oslobanden spiller låter fra alle epoker, med relativt uanstrengt bravur, på alle tenkelige instrumenter, og i absolutt all slags vær. Oslobanden har også utviklet et unikt, patentert system der publikum selv kan bestemme hva slags låter som spilles.",
+        ],
+        div![
+            C!["musikere-header"],
+            "Musikere:"
+        ],
+        div![
+            C!["musiker-flex"],
+            div![
+                C!["musiker"],
+                "Hugo Herrman",
+            ],
+            div![
+                C!["instrument"],
+                "trommer, sax, vokal",
+            ],
+        ],
+        div![
+            C!["musiker-flex"],
+            div![
+                C!["musiker"],
+                "Jonathan S. Bjørnseth",
+            ],
+            div![
+                C!["instrument"],
+                "bass, vokal",
+            ],
+        ],
+        div![
+            C!["musiker-flex"],
+            div![
+                C!["musiker"],
+                "Anja G. Bajer",
+            ],
+            div![
+                C!["instrument"],
+                "fiolin",
+            ],
+        ],
+        div![
+            C!["musiker-flex"],
+            div![
+                C!["musiker"],
+                "Jacob B. Hvattum",
+            ],
+            div![
+                C!["instrument"],
+                "cello, vokal",
+            ],
+        ],
+        div![
+            C!["musiker-flex"],
+            div![
+                C!["musiker"],
+                "Hauk J. Røsten",
+            ],
+            div![
+                C!["instrument"],
+                "gitarer, vokal",
+            ],
+        ],
+        div![
+            C!["musiker-flex"],
+            div![
+                C!["musiker"],
+                "Geirmund T. Simonsen",
+            ],
+            div![
+                C!["instrument"],
+                "tangenter",
+            ],
         ],
         div![
             C!["paragraph-text"],
